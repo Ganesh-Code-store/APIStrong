@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 
 public class BUG4292 {
 	
+	//Bug 4292: API\History: duration displayed as “0 Sec”
+	
 	static void time()
 	{
 		new BaseClass().GETAPI();
