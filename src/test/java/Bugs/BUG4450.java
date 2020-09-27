@@ -23,6 +23,7 @@ public class BUG4450 {
 			System.out.println("Bug-4450 should be closed");
 
 		}
+		BUG4292.time();
 
 
 	}

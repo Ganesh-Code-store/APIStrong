@@ -21,7 +21,7 @@ public class Locators {
 	public static String login="kc-login";
 	public static String GETAPIUrl="https://reqres.in/api/users?page=2";
 	public static String POSTAPIUrl="https://reqres.in/api/users";
-	
+	public static String duration="//span[contains(@title ,'ms')]";
 	public static String urlText="urlText";
 	public static String saveapi="save-api";
 	public static String TestsMenu="TestsMenu";
