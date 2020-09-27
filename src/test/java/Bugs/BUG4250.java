@@ -4,7 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 
-public class BUG4250 extends BUG4364{
+public class BUG4250{
 	// Bug 4250: Report: Source displayed blank for test in reports
 
 	public boolean findSource() {

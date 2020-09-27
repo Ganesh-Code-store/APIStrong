@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-public class BUG4364 extends BUG4371 {
+public class BUG4364 {
 	//Bug 4364: UI\Maintenance\Recurrence: Radio button is not checked for default option “Daily”
 
 	public static void dailyCheckBox() {

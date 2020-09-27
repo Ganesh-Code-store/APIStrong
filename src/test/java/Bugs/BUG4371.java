@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class BUG4371 extends BUG4337 {
+public class BUG4371 {
 	public static  WebDriver driver;
 
 	//Bug 4371: Fun\History: showing 0 reports when user is running API manually via API's listing and API edit
