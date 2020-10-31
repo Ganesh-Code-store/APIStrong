@@ -14,10 +14,27 @@ public class BaseClass extends Locators {
 	public void setup() {
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\urank\\Downloads\\chromedriver_win32 (1)\\chromedriver.exe");
+				"C:\\Users\\urank\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
+	}
+	
+	public void Register()
+	{
+		int num=(int) Math.ceil(Math.random()*10000);
+		String email="qa"+num+"@mailinator.com";
+		driver.get(reg);
+		
+		driver.findElement(By.id(txtRegEmail)).sendKeys(email);
+		driver.findElement(By.id(txtRegPassword)).sendKeys("test12");
+		driver.findElement(By.id(txtConfirmPassword)).sendKeys("test12");
+		driver.findElement(By.id(txtCompany)).sendKeys("qa"+num);
+		driver.findElement(By.id(regklogin)).click();
+
+
+		
+		
 	}
 
 	public void RunAPI() {
@@ -40,7 +57,6 @@ public class BaseClass extends Locators {
 
 	public void Login() {
 		driver.get(url);
-		driver.findElement(By.id(txtEmail)).sendKeys("apiautomation@mailinator.com");
 		driver.findElement(By.id(txtPassword)).sendKeys("test12");
 		driver.findElement(By.id(login)).click();
 
