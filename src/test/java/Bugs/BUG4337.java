@@ -11,7 +11,6 @@ public class BUG4337 {
 	// Bug 4337: Login/Register: Facebook word is displayed on button as “facebook”
 
 	static void facebook() {
-		 BaseClass.Logout();
 		BaseClass.driver.get(BaseClass.url);
 		BaseClass.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
@@ -27,12 +26,14 @@ public class BUG4337 {
 	
 		}
 		
-		BUG4418.placeHolder();
+		//BUG4418.placeHolder();
 	}
 
 	public static void main(String args[]) {
-		//new BaseClass().setup();
-		//new BUG4337().facebook();
+		new BaseClass().setup();
+		new BUG4337().facebook();
+		BaseClass.driver.quit();
+
 	}
 
 }

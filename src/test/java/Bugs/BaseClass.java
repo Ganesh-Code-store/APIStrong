@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
@@ -14,7 +15,7 @@ public class BaseClass extends Locators {
 	public void setup() {
 
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\urank\\Downloads\\chromedriver_win32 (3)\\chromedriver.exe");
+				"E:\\chromedriver_win32\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 
@@ -31,10 +32,13 @@ public class BaseClass extends Locators {
 		driver.findElement(By.id(txtConfirmPassword)).sendKeys("test12");
 		driver.findElement(By.id(txtCompany)).sendKeys("qa"+num);
 		driver.findElement(By.id(regklogin)).click();
-
-
+		driver.findElement(By.xpath(Skip)).click();
 		
-		
+	}
+
+	private WebElement findElement(By id) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	public void RunAPI() {
@@ -57,6 +61,9 @@ public class BaseClass extends Locators {
 
 	public void Login() {
 		driver.get(url);
+		driver.findElement(By.id(txtEmail)).sendKeys("apiautomation@mailinator.com");
+
+		
 		driver.findElement(By.id(txtPassword)).sendKeys("test12");
 		driver.findElement(By.id(login)).click();
 

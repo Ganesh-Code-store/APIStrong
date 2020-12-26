@@ -39,9 +39,9 @@ public class BUG4250{
 
 	}
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws InterruptedException {
 		new BaseClass().setup();
-		new BaseClass().Login();
+		new BaseClass().Register();
 		new BaseClass().GETAPI();
 		new BaseClass().RunAPI();
 
@@ -51,8 +51,10 @@ public class BUG4250{
 			System.out.println("BUG-4250 should be Reopened");
 
 		}
+		BaseClass.driver.quit();
+
 		
-		BUG4364.dailyCheckBox();
+		//BUG4364.dailyCheckBox();
 
 
 	}

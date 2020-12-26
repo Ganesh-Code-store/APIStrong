@@ -3,6 +3,8 @@ package Bugs;
 import org.openqa.selenium.By;
 
 public class BUG4563 {
+	//Bug 4563: API summary : message displayed when there is no run history for 
+	//api "No API history found"
 	
 	void summary()
 	{

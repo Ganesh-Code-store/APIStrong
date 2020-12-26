@@ -10,7 +10,7 @@ public class BUG4371 {
 
 	//Bug 4371: Fun\History: showing 0 reports when user is running API manually via API's listing and API edit
 	
-	public static void verifyHistory()
+	public static void verifyHistory() throws InterruptedException
 	{
 		new BaseClass().GETAPI();
 		new BaseClass().RunAPI();
@@ -60,15 +60,17 @@ public class BUG4371 {
 
 		System.out.println("Bug-4371 should be closed");
 
-		BUG4337.facebook();
+		//BUG4337.facebook();
 	}
 	
 	
-	public static void main(String args[])
+	public static void main(String args[]) throws InterruptedException
 	{
-		//new BaseClass().setup();
-		//new BaseClass().Login();
-		//new BUG4371().verifyHistory();
+		new BaseClass().setup();
+		new BaseClass().Register();;
+		new BUG4371().verifyHistory();
+		BaseClass.driver.quit();
+
 	 
 	}
 

@@ -28,12 +28,13 @@ public class BUG4418 {
 			System.out.println("Bug-4418 should be Reopened");
 
 		}
-		BUG4450.textarea();
+		//BUG4450.textarea();
 	}
 
 	public static void main(String args[]) {
-		//new BaseClass().setup();
-		//new BUG4418().placeHolder();
+		new BaseClass().setup();
+	 new BUG4418().placeHolder();
+		BaseClass.driver.quit();
 
 	}
 

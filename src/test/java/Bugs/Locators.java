@@ -1,7 +1,23 @@
 package Bugs;
 
 public class Locators {
+	
+	
+	public static String txtProjectSearch="txtProjectSearch";
+	
+	public static String DeleteAPI="//span[text()='Delete API']";
+	
+	public static String apilist="//a[@class='ellipsis-cell regular-link']";
+	
+	public static String APIcnt="//h2[contains(text(),'API/Suite(s)')]";
+	
+	public static String pkgstr="E:\\TestColl.json";
+	
+	public static String ProjectMenu="ProjectMenu";
+	public static String UploadFolderFiles="UploadFolderFiles";
 
+	public static String btnImport="btnImport";
+	
 	public static String txtarea = "//textarea[@id='bearetoken']";
 
 	public static String dropdownSubMenureport = "//a[text()='Administration']";
@@ -13,7 +29,7 @@ public class Locators {
 	public static String EmailAddress = "EmailAddress";
 	public static String crapi = "Create_a_basic_request";
 
-	public static String reg = "https://portal.apistrong.com/Account/Register";
+	public static String reg = "https://dev.apistrong.com/Account/Register";
 
 	public static String txtRegEmail = "txtRegEmail";
 	public static String txtRegPassword = "txtRegPassword";
@@ -23,7 +39,6 @@ public class Locators {
 
 	public static String repo="dropdownSubMenureport";
 	public static String APISum="//a[text()='API Summary']";
-	public static String ="//td[@class='dataTables_empty']";
 	
 	
 	
@@ -43,7 +58,7 @@ public class Locators {
 	public static String txtSearch = "txtSearch";
 	public static String runapi = "run-api";
 	public static String profilediv = "profile-div";
-	public static String url = "http://portal.apistrong.com/";
+	public static String url = "http://dev.apistrong.com/";
 	public static String httpMethodDropdown = "httpMethodDropdown";
 	public static String btnhistory = "btn-history";
 	public static String APiname = "";
@@ -70,5 +85,7 @@ public class Locators {
 
 	public static String Results = "//a[@title='Results']";
 	public static String face = "//*[text()=' Login with Facebook']";
+	
+	public static String reports="//a[text()='Reports']";
 
 }

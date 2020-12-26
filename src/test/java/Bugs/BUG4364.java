@@ -29,12 +29,16 @@ public class BUG4364 {
 		}
 		BaseClass.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
-		BaseClass.driver.navigate().refresh();
-		BUG4371.verifyHistory(); 
+	}
+	public static void main(String args[])
+	{
+		new BaseClass().setup();
+		new BaseClass().Login();
+		new BUG4364().dailyCheckBox();
+		BaseClass.driver.quit();
 
 
 	}
-
 
 
 }

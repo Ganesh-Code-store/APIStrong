@@ -6,7 +6,7 @@ public class BUG4292 {
 	
 	//Bug 4292: API\History: duration displayed as “0 Sec”
 	
-	static void time()
+	static void time() throws InterruptedException
 	{
 		new BaseClass().GETAPI();
 		new BaseClass().RunAPI();
@@ -25,11 +25,12 @@ public class BUG4292 {
 		}
 	}
 	
-	public static void main(String args[])
+	public static void main(String args[]) throws InterruptedException
 	{
-		//new BaseClass().setup();
-		//new BaseClass().Login();
-		//new BUG4292().time();
+		new BaseClass().setup();
+		new BaseClass().Register();
+		new BUG4292().time();
+		BaseClass.driver.quit();
 	
 	}
 
