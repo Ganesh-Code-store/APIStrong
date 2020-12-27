@@ -2,6 +2,16 @@ package Bugs;
 
 public class Locators {
 	
+	public static String collUrl="//a[text()='TestColl']";
+	
+	public static String clickonapi="//i[text()='GET' or text()='PUT' or text()='DELETE' or text()='POST']";
+	
+	public static String absurilink="//span[contains(text(),'htt')]";
+	
+	
+	public static String deleteproject="//a[@title='Delete']";
+	
+	public static String projectnotfound="//p[text()='Project not found.']";
 	
 	public static String txtProjectSearch="txtProjectSearch";
 	
@@ -9,7 +19,7 @@ public class Locators {
 	
 	public static String apilist="//a[@class='ellipsis-cell regular-link']";
 	
-	public static String APIcnt="//h2[contains(text(),'API/Suite(s)')]";
+	public static String APIcnt="//h2[contains(text(),'API(s)')]";
 	
 	public static String pkgstr="E:\\TestColl.json";
 	

@@ -1,79 +1,106 @@
 package Bugs;
 
-import org.openqa.selenium.By;
+import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
-public class BUG4651 extends BaseClass{
-	//Bug 4651: Import: cannot delete project with all api’s are deleted
-	
-	
-	void importcoll() throws InterruptedException
-	{
-		int ind=0;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class BUG4651 extends BaseClass {
+	// Bug 4651: Import: cannot delete project with all api’s are deleted
+
+	void importcoll() throws InterruptedException {
+		int ind = 0;
+		String[] apinames = new String[ind];
+
 		driver.findElement(By.id(btnImport)).click();
 		driver.findElement(By.id(UploadFolderFiles)).sendKeys(pkgstr);
-		
-		Thread.sleep(3000);
-		driver.findElement(By.id(ProjectMenu)).click();
-		
-		try
-		{
-			driver.findElement(By.xpath("//a[Contains("+this.pkgstr+",'@title=CollectionForTesting')]")).click();
-			String cnt=driver.findElement(By.xpath(APIcnt)).getText();
-			
-			for(int i=0;i<cnt.length();i++)
-			{
-				if(Character.isDigit(cnt.charAt(i)))
-				{
-					ind=Character.getNumericValue(cnt.charAt(i));
-					
+		WebDriverWait wait=new WebDriverWait(driver, 20);
+
+		WebElement projectlink = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(ProjectMenu)));
+		projectlink.click();
+
+		//driver.findElement(By.id(ProjectMenu)).click();
+
+		try {
+			driver.findElement(By.xpath(collUrl)).click();
+			String cnt = driver.findElement(By.xpath(APIcnt)).getText();
+
+			for (int i = 0; i < cnt.length(); i++) {
+				if (Character.isDigit(cnt.charAt(i))) {
+					ind = Character.getNumericValue(cnt.charAt(i));
+
 				}
 			}
-			
-			for(int i=0;i<ind;i++)
-			{
-				driver.findElement(By.xpath(apilist)).click();
-				driver.findElement(By.id(testactionsdropdowntoggle)).click();
-				driver.findElement(By.id(DeleteAPI)).click();	
-				driver.findElement(By.id(ProjectMenu)).click();
-				driver.findElement(By.xpath("//a[Contains("+this.pkgstr+",'@title=CollectionForTesting')]")).click();
+			System.out.println("Package imported:" + ind);
 
-
-	
-			}
-
-
-		}
-		catch(Exception e)
-		{
+		} catch (Exception e) {
 			System.out.println("Package not imported");
 		}
 		
 		
-
-
-	}
-	
-	void deleteColl()
-	{
-		driver.findElement(By.id(ProjectMenu)).click();
-		driver.findElement(By.id(txtProjectSearch)).sendKeys();
-
-
 		
 
+		for(int i=0;i<ind;i++)
+		{
+			//Thread.sleep(3000);
+			deleteAPI();
+			Thread.sleep(2000);
+
+			driver.findElement(By.id(ProjectMenu)).click();
+			driver.findElement(By.xpath(collUrl)).click();
+
+			
+		}
+		
 	}
+void deleteAPI() throws InterruptedException
+{
+	Thread.sleep(2000);
+
+	String absuri=driver.findElement(By.xpath(absurilink)).getText();
+	driver.findElement(By.id(TestsMenu)).click();
+	driver.findElement(By.id(txtSearch)).sendKeys(absuri);
+	BaseClass.driver.findElement(By.xpath(clickonapi)).click();
+	Thread.sleep(2000);
+	driver.findElement(By.id(testactionsdropdowntoggle)).click();
+	driver.findElement(By.xpath(DeleteAPI)).click();
 	
+}
+
+	void deleteColl() {
+		driver.findElement(By.id(ProjectMenu)).click();
+		driver.findElement(By.id(txtProjectSearch)).sendKeys("TestColl");
+		
+		driver.findElement(By.xpath(deleteproject)).click();
+		driver.switchTo().alert().accept();
+		
+		try
+		{
+			driver.findElement(By.id(txtProjectSearch)).sendKeys("TestColl");
 	
-	public static void main(String args[]) throws InterruptedException
-	{
+		driver.findElement(By.xpath(projectnotfound));
+		System.out.println("BUG 4651 should be closed");
+		}
+		catch(Exception e)
+		{
+			System.out.println("BUG 4651 should be reopened");
+
+		}
+
+	}
+
+	public static void main(String args[]) throws InterruptedException {
 		new BaseClass().setup();
 		new BaseClass().Login();
 		new BUG4651().importcoll();
 		new BUG4651().deleteColl();
-		BaseClass.driver.quit();
-		
-			
-	
+		// BaseClass.driver.quit();
+
 	}
 
 }
