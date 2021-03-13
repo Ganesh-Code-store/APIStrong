@@ -1,4 +1,4 @@
-package Bugs;
+package Regression;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

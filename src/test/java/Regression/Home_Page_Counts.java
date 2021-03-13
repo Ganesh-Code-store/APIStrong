@@ -1,10 +1,10 @@
-package Bugs;
+package Regression;
 
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 
-import Bugs.BaseClass;
+import Regression.BaseClass;
 
 public class Home_Page_Counts extends BaseClass {
 	int total_hits=0;

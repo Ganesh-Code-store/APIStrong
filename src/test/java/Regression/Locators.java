@@ -1,4 +1,5 @@
-package Bugs;
+package Regression;
+
 
 public class Locators {
 	public static String forgotValid="//div[@class='validation-summary-errors text-danger']//ul//li";

@@ -1,4 +1,4 @@
-package Bugs;
+package Regression;
 
 import java.awt.List;
 import java.util.ArrayList;
