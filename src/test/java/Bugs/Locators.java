@@ -1,12 +1,50 @@
 package Bugs;
 
 public class Locators {
+	public static String forgotValid="//div[@class='validation-summary-errors text-danger']//ul//li";
+	
+	public static String loginForgotPasswordlink="loginForgotPasswordlink";
+	
+	public static String SaveUser="SaveUser";
+	
+	public static String FirstNamein="FirstName";
+	public static String LastNamein="LastName";
+	public static String EmailAddressin="EmailAddress";
+	
+
+	public static String ThreatProtection="//a[text()='Threat Protection']";
+	
+	
+	public static String newMaintennaceMode="btnCreateNewPolicy";
+	
+	public static String AlarmMaintanceWindow="AlarmMaintanceWindow";
+	
+	
+	public static String response_code="response_code";
+	public static String response_info="response-info";
+	
+	public static String btn_response="btn-response";
+	
+	
+	public static String callexposeapi="call-expose-api";
+	
+	public static String saveipaddressrange="save-ipaddress-range-1";
+	
+	public static String btn_api_threatprotection="btn-api-threatprotection";
+	
+	public static String ip_range_from="ip-range-from-1";
+	
+	
+	public static String ipcollapse="//div[@class='accordion-heading']//a[contains(text(),'IP Address Range')]";
 	
 	public static String collUrl="//a[text()='TestColl']";
 	
 	public static String clickonapi="//i[text()='GET' or text()='PUT' or text()='DELETE' or text()='POST']";
 	
 	public static String absurilink="//span[contains(text(),'htt')]";
+	
+	
+	public static String Home="//a[text()='Home']";
 	
 	
 	public static String deleteproject="//a[@title='Delete']";
@@ -49,9 +87,19 @@ public class Locators {
 
 	public static String repo="dropdownSubMenureport";
 	public static String APISum="//a[text()='API Summary']";
+	public static String formdata="//input[@Value='form-data']";
 	
 	
 	
+	public static String form_data="//input[@value='form-data']";
+	
+	public static String formdatatype="form-control bodyType";
+	public static String key="//input[@title='Enter key']";
+	public static String value="//input[@title='Enter value']";
+	
+	
+	public static String errormsg="ErrorAlertMsg";
+	public static String body="btn-request-body";
 	public static String httpAuthDropdown = "httpAuthDropdown";
 
 	public static String btnCreateTest = "btnCreateTest";
