@@ -57,7 +57,7 @@ public class Home_Page_Counts extends BaseClass {
 				System.out.println("Success hits not count inreased by 1 :"+successful);
 			}
 		}
-		else
+		else  
 		{
 			System.out.println("Total hits count not inreased by 1 :"+totalhits+" "+total_hits);
 
@@ -75,20 +75,29 @@ public class Home_Page_Counts extends BaseClass {
 	
 	public static void main(String args[]) throws InterruptedException
 	{
-		new BaseClass().setup();
-		new BaseClass().Register();
-		
-		new BaseClass().GETAPI();
-		new BaseClass().RunAPI();
+		try
+		{
+			new BaseClass().setup();
+			new BaseClass().Register();
+			
+			new BaseClass().GETAPI();
+			new BaseClass().RunAPI();
 
-		new Home_Page_Counts().countChecks();
+			new Home_Page_Counts().countChecks();
 
-		new BaseClass().POSTAPI();
+			new BaseClass().POSTAPI();
 
-		new BaseClass().RunAPI();
+			new BaseClass().RunAPI();
 
-		new Home_Page_Counts().countChecks();
-		
+			new Home_Page_Counts().countChecks();
+			driver.quit();
+		}
+		catch(Exception e)
+		{
+			System.out.println(e);
+			driver.quit();
+		}
+				
 		
 		
 		

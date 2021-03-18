@@ -2,6 +2,19 @@ package Regression;
 
 
 public class Locators {
+	public static String btnparams="btn-params";
+	
+	
+	public static String perUsage="perUsage";
+	
+	public static String userFailRuns="userFailRuns";
+	
+	
+	public static String userSuccessRuns="userSuccessRuns";
+	
+	
+	public static String userRuns="userRuns";
+	
 	public static String forgotValid="//div[@class='validation-summary-errors text-danger']//ul//li";
 	
 	public static String loginForgotPasswordlink="loginForgotPasswordlink";
