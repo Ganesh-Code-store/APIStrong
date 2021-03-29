@@ -2,6 +2,45 @@ package Regression;
 
 
 public class Locators {
+	public static String ExecFlow="ExecFlow";
+	
+	public static String SaveFlow="SaveFlow";
+	
+	public static String dragArea="//li[text()='Drag API Here']";
+	
+	public static String Gotit="//button[@title='Got it']";
+	
+	public static String ErrorAlertMsg="//span[text()='Workspace flow with this name already exist.']";
+	
+	public static String btnCreateAF="btnCreateAF";
+	
+	public static String newprojectname="new-project-name";
+	
+	public static String btnCreateProjectPopup="btnCreateProjectPopup";
+	
+	public static String total="//span[contains(text(),'Total')]";
+	
+	public static String lnkResult="lnkResult";
+	
+	public static String Last30days="//label[text()='Last 30 Days']";
+	
+	public static String last7days="//label[text()='Last 7 Days']";
+	
+	
+	public static String last24hr="//label[text()='Last 24 Hours']";
+	
+	public static String links="//a[@class='cursor-pointer']";
+	
+	
+	public static String strong="//strong[text()='Success Ratio']";
+	
+	public static String firstLink="//a[@class='ellipsis-cell'][1]";
+	
+	
+	public static String WorkflowHistory="//span[text()='History']";
+	
+	
+	public static String Workflows="//a[text()='Workflows']";
 	public static String btnparams="btn-params";
 	
 	
