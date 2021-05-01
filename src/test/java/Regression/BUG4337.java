@@ -16,6 +16,8 @@ public class BUG4337 {
 
 		String Fac=BaseClass.driver.findElement(By.xpath(BaseClass.face)).getText();
 		
+		System.out.println(Fac);
+		
 		if(Fac.contains("F"))
 		{
 			System.out.println("BUG-4337 should be closed");

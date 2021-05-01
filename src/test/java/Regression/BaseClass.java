@@ -1,9 +1,13 @@
 package Regression;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,12 +15,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.google.common.io.Files;
+
 public class BaseClass extends Locators {
 
 	public static  WebDriver driver;
 
 	public void setup() {
-
+		
 		System.setProperty("webdriver.chrome.driver",
 				"C:\\Users\\User\\Downloads\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -39,6 +45,15 @@ public class BaseClass extends Locators {
 		return email;
 
 	}
+	
+	void Screenshot(String fileName) throws IOException
+	{
+		driver.get("https://dev.apistrong.com/");
+		File file=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+	    Files.copy(file,new File("E:\\eclipse-workspace\\APIStrong\\src\\test\\java\\snaps//"+fileName+".jpg"));
+	    
+	}
+	
 	
 	public void Register()
 	{

@@ -142,6 +142,10 @@ public class Locators {
 	public static String APISum="//a[text()='API Summary']";
 	public static String formdata="//input[@Value='form-data']";
 	
+	public static String addOverlay="addOverlay";
+	public static String gotopublic="go-to-public";
+	
+	
 	
 	
 	public static String form_data="//input[@value='form-data']";
