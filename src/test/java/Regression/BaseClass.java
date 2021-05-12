@@ -31,7 +31,7 @@ public class BaseClass extends Locators {
 
 	}
 	
-	public String generateMail()
+	public static String generateMail()
 	{
 		final String ALPHA_NUMERIC_STRING = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz";		
 	    int count=10;

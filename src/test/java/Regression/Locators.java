@@ -2,6 +2,24 @@ package Regression;
 
 
 public class Locators {
+	
+	
+	public static String acceptInvite="//div//a[text()='Please click this link to accept my invitation. ']";
+	
+	
+	
+	public static String switchit="//div[@title='Switch Account']";
+	
+	public static String supportmail="//td[contains(text(),'support')]";
+	
+	public static String btnsendinvite="btnsendinvite";
+	
+	public static String txtInviteEmail="txtInviteEmail";
+	
+	public static String invite="invite";
+	
+	
+	
 	public static String ExecFlow="ExecFlow";
 	
 	public static String SaveFlow="SaveFlow";
@@ -15,6 +33,8 @@ public class Locators {
 	public static String btnCreateAF="btnCreateAF";
 	
 	public static String newprojectname="new-project-name";
+	
+	public static String account="//a[text()='Account']";
 	
 	public static String btnCreateProjectPopup="btnCreateProjectPopup";
 	
