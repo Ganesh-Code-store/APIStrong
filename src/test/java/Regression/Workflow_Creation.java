@@ -5,6 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Workflow_Creation extends BaseClass {
 	JavascriptExecutor js=(JavascriptExecutor)driver;
@@ -17,9 +19,12 @@ public class Workflow_Creation extends BaseClass {
 		Thread.sleep(2000);
 
 		js.executeScript("window.scrollBy(0,1000)");
-		driver.findElement(By.xpath(Gotit)).click();
+		//driver.findElement(By.xpath(Gotit)).click();
 
-		driver.findElement(By.id(btnCreateProjectPopup)).click();
+		WebDriverWait wait=new WebDriverWait(driver,20);
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.id(btnCreateProjectPopup))).click();
+		//driver.findElement(By.id(btnCreateProjectPopup)).click();
 		Thread.sleep(3000);
 		
 		 workflowname="Flow"+Math.ceil((Math.random()*100));
@@ -47,26 +52,32 @@ public class Workflow_Creation extends BaseClass {
 			System.out.println("Workflow created!");
 
 		}
-	}
-	void AddAPIsToWorkflow() throws InterruptedException
-	{
-		Actions act=new Actions(driver);
 		Thread.sleep(2000);	
 		driver.findElement(By.xpath("//a[@title='"+this.workflowname+"']")).click();	
+		
+	}
+	 void AddAPIsToWorkflow() throws InterruptedException
+	{
+		Actions act=new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		for(int i=1;i<=10;i++)
+		for(int i=1;i<=5;i++)
 		{
 			act.dragAndDrop(driver.findElement(By.xpath("//li[@class='sidebar-row ui-sortable-handle']"+"['"+i+"']")), driver.findElement(By.xpath(dragArea))).perform();
 		}
 		Thread.sleep(2000);
 		driver.findElement(By.id(SaveFlow)).click();	
 		Thread.sleep(2000);
-		driver.findElement(By.id(ExecFlow)).click();	
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-	}
 	
+	}
+
+	 public void executeFlow()
+	 {
+			driver.findElement(By.id(ExecFlow)).click();	
+			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+	 }
+	 
 	public static void main(String[] args) {
 		try
 		{
@@ -74,12 +85,14 @@ public class Workflow_Creation extends BaseClass {
 			new BaseClass().Login();
 			new Workflow_Creation().CreateWorkFlow();
 			new Workflow_Creation().AddAPIsToWorkflow();
-			//driver.quit();	
+			new Workflow_Creation().executeFlow();
+			
+			driver.quit();	
 		}
 		catch(Exception e)
 		{
 			System.out.println(e);
-			//driver.quit();
+			driver.quit();
 		}
 		
 

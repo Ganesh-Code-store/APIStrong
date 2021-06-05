@@ -3,11 +3,54 @@ package Regression;
 
 public class Locators {
 	
+	public static String stepidentify="//div[@class='name' and text()='step']";
+	
+	public static String apiNameStep="apiName";
+	
+	public static String urlTextStep="urlText";
+	
+	public static String tryit="[title='Send API']";
+	
+	public static String AddNewStep="AddNewStep";
+	
+	public static String apirunLoader="ProgressStripe-4553";
+	
+	public static String dates="//ul//li[@data-range-key]";
+	
+	public static String btnPicker="btnPicker";
+	
+	public static String upgrade="btnUpgrade";
+	
+	
+	public static String json="json";
+	
+	public static String authdrop="//select[@id='httpAuthDropdown' and @class='form-control']";
+	
+	
+	public static String textonTour="//div[@Class='introjs-tooltiptext']";
+	
+	public static String tour="//p[text()='Quick Tour']";
+	
+	
+	public static String payment="payment";
+	
+	public static String plan="plan";
+	
+	public static String done="//a[text()='Done']";
+	
+	public static String next="//a[text()='Next →']";
+	
+	
+	public static String help="//img[@title='Help Assistant']";
+	
+	public static String dateOfDefaultPolicy="//td[@class=' AddBottomBorder' and contains(text(),'AM')]";
+	
 	
 	public static String acceptInvite="//div//a[text()='Please click this link to accept my invitation. ']";
 	
 	
-	
+	public static String btnalert="btn-alert";
+
 	public static String switchit="//div[@title='Switch Account']";
 	
 	public static String supportmail="//td[contains(text(),'support')]";
@@ -93,10 +136,10 @@ public class Locators {
 	public static String AlarmMaintanceWindow="AlarmMaintanceWindow";
 	
 	
-	public static String response_code="response_code";
+	public static String response_code="//span[@id='response_code']";
 	public static String response_info="response-info";
 	
-	public static String btn_response="btn-response";
+	public static String btn_response="//button[@id='btn-response' and text()='Response']";
 	
 	
 	public static String callexposeapi="call-expose-api";
@@ -183,7 +226,7 @@ public class Locators {
 	public static String txtEmail = "txtEmail";
 	public static String txtPassword = "txtPassword";
 	public static String login = "kc-login";
-	public static String GETAPIUrl = "https://reqres.in/api/users?page=2";
+	public static String GETAPIUrl = "https://gorest.co.in/public-api/users";
 	public static String POSTAPIUrl = "https://reqres.in/api/users";
 	public static String duration = "//span[contains(@title ,'ms')]";
 	public static String urlText = "urlText";
@@ -191,7 +234,7 @@ public class Locators {
 	public static String TestsMenu = "TestsMenu";
 	public static String apiName = "apiName";
 	public static String txtSearch = "txtSearch";
-	public static String runapi = "run-api";
+	public static String runapi = "[title='Run API']";
 	public static String profilediv = "profile-div";
 	public static String url = "http://dev.apistrong.com/";
 	public static String httpMethodDropdown = "httpMethodDropdown";
