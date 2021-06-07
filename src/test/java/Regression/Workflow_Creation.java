@@ -19,7 +19,7 @@ public class Workflow_Creation extends BaseClass {
 		Thread.sleep(2000);
 
 		js.executeScript("window.scrollBy(0,1000)");
-		//driver.findElement(By.xpath(Gotit)).click();
+		driver.findElement(By.xpath(Gotit)).click();
 
 		WebDriverWait wait=new WebDriverWait(driver,20);
 		

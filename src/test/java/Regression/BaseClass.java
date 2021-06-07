@@ -200,7 +200,7 @@ public class BaseClass extends Locators {
 
 	public static void Login() {
 		driver.get(url);
-		driver.findElement(By.id(txtEmail)).sendKeys("2PhiSOzP72@mailinator.com");
+		driver.findElement(By.id(txtEmail)).sendKeys("workflow@mailinator.com");
 
 		driver.findElement(By.id(txtPassword)).sendKeys("test12");
 		driver.findElement(By.id(login)).click();

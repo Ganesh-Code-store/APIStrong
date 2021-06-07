@@ -3,6 +3,17 @@ package Regression;
 
 public class Locators {
 	
+	
+	public static String SuccessAlertMsg="SuccessAlertMsg";
+	
+	public static String saveintegration="saveintegration";
+	
+	public static String WebhookURL="WebhookURL";
+	public static String webhook="https://hooks.slack.com/services/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";
+	
+	
+	public static String slack="//a[text()='Integrations']";
+	
 	public static String stepidentify="//div[@class='name' and text()='step']";
 	
 	public static String apiNameStep="apiName";
@@ -62,7 +73,7 @@ public class Locators {
 	public static String invite="invite";
 	
 	
-	
+	public static String apislist="//div[@class='details']//div[@class='name']";
 	public static String ExecFlow="ExecFlow";
 	
 	public static String SaveFlow="SaveFlow";
