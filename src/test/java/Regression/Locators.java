@@ -3,6 +3,9 @@ package Regression;
 
 public class Locators {
 	
+	public static String workflowStatus="//td[@class='AddBottomBorder CenterAlign'][3]";
+	
+	
 	
 	public static String SuccessAlertMsg="SuccessAlertMsg";
 	

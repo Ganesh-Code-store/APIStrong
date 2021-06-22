@@ -56,12 +56,12 @@ public class Workflow_Creation extends BaseClass {
 		driver.findElement(By.xpath("//a[@title='"+this.workflowname+"']")).click();	
 		
 	}
-	 void AddAPIsToWorkflow() throws InterruptedException
+	 void AddAPIsToWorkflow(int n) throws InterruptedException
 	{
 		Actions act=new Actions(driver);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		
-		for(int i=1;i<=5;i++)
+		for(int i=1;i<=n;i++)
 		{
 			act.dragAndDrop(driver.findElement(By.xpath("//li[@class='sidebar-row ui-sortable-handle']"+"['"+i+"']")), driver.findElement(By.xpath(dragArea))).perform();
 		}
@@ -84,7 +84,7 @@ public class Workflow_Creation extends BaseClass {
 			new BaseClass().setup();
 			new BaseClass().Login();
 			new Workflow_Creation().CreateWorkFlow();
-			new Workflow_Creation().AddAPIsToWorkflow();
+			new Workflow_Creation().AddAPIsToWorkflow(5);
 			new Workflow_Creation().executeFlow();
 			
 			driver.quit();	

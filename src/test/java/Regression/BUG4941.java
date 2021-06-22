@@ -58,7 +58,7 @@ public class BUG4941 extends BaseClass {
 			}
 			
 			new Workflow_Creation().CreateWorkFlow();
-			new Workflow_Creation().AddAPIsToWorkflow();
+			new Workflow_Creation().AddAPIsToWorkflow(3);
 			
 			new BUG4941().CreateStep();
 			BaseClass.quitBrowser();
