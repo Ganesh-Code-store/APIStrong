@@ -63,8 +63,7 @@ public class BUG4956 extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 		try {
 			BaseClass.setup();
-			BaseClass.Login();
-			new BUG4956().GetAPIlist();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new BUG4956().GetAPIlist();
 			new BUG4956().TestSearch();
 			BaseClass.quitBrowser();
 		} catch (Exception e) {

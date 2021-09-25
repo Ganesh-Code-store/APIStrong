@@ -198,11 +198,11 @@ public class BaseClass extends Locators {
 		driver.findElement(By.id(runapi)).click();
 	}
 
-	public static void Login() {
+	public static void Login(String email,String Pass) {
 		driver.get(url);
-		driver.findElement(By.id(txtEmail)).sendKeys("workflow@mailinator.com");
+		driver.findElement(By.id(txtEmail)).sendKeys(email);
 
-		driver.findElement(By.id(txtPassword)).sendKeys("test12");
+		driver.findElement(By.id(txtPassword)).sendKeys(Pass);
 		driver.findElement(By.id(login)).click();
 
 

@@ -51,8 +51,7 @@ public class WorkFlow_Report extends BaseClass {
 		try
 		{
 			new BaseClass().setup();
-			new BaseClass().Login();
-			new WorkFlow_Report().Workflow();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new WorkFlow_Report().Workflow();
 			driver.quit();
 
 				

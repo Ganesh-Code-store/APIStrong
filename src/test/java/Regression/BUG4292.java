@@ -28,9 +28,15 @@ public class BUG4292 {
 	public static void main(String args[]) throws InterruptedException
 	{
 		new BaseClass().setup();
-		new BaseClass().Register();
-		new BUG4292().time();
-		BaseClass.driver.quit();
+		
+		for(int i=0;i<5;i++)
+		{
+			new BaseClass().Register();
+			new BaseClass().Logout();
+				
+		}
+		//new BUG4292().time();
+		//BaseClass.driver.quit();
 	
 	}
 

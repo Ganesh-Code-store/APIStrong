@@ -80,8 +80,7 @@ public class BUG4902 extends BaseClass {
 	public static void main(String args[]) {
 		try {
 			BaseClass.setup();
-			BaseClass.Login();
-			new BUG4902().Company();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new BUG4902().Company();
 			new BUG4902().UserInvites();
 			new BUG4902().Plan();
 			new BUG4902().payment();

@@ -5,9 +5,9 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
 public class BUG4364 {
-	//Bug 4364: UI\Maintenance\Recurrence: Radio button is not checked for default option “Daily”
+	// Bug 4364: UI\Maintenance\Recurrence: Radio button is not checked for default
+	// option “Daily”
 
 	public static void dailyCheckBox() {
 
@@ -30,15 +30,13 @@ public class BUG4364 {
 		BaseClass.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 	}
-	public static void main(String args[])
-	{
+
+	public static void main(String args[]) {
 		new BaseClass().setup();
-		new BaseClass().Login();
+		BaseClass.Login("workflow@mailinator.com", "test12");
 		new BUG4364().dailyCheckBox();
 		BaseClass.driver.quit();
 
-
 	}
-
 
 }

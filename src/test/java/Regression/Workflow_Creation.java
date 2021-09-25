@@ -82,8 +82,7 @@ public class Workflow_Creation extends BaseClass {
 		try
 		{
 			new BaseClass().setup();
-			new BaseClass().Login();
-			new Workflow_Creation().CreateWorkFlow();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new Workflow_Creation().CreateWorkFlow();
 			new Workflow_Creation().AddAPIsToWorkflow(5);
 			new Workflow_Creation().executeFlow();
 			

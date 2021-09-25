@@ -20,8 +20,7 @@ public class BUG4951 extends BaseClass{
 	public static void main(String[] args) {
 		
 		BaseClass.setup();
-		BaseClass.Login();
-		new BUG4951().integration();
+		BaseClass.Login("workflow@mailinator.com", "test12");		new BUG4951().integration();
 		
 
 	}

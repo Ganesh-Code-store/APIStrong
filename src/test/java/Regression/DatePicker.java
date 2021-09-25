@@ -39,8 +39,7 @@ public class DatePicker extends BaseClass {
 	public static void main(String args[]) throws InterruptedException
 	{
 		BaseClass.setup();
-		BaseClass.Login();
-		new DatePicker().iteratDates();
+		BaseClass.Login("workflow@mailinator.com", "test12");		new DatePicker().iteratDates();
 	}
 
 }

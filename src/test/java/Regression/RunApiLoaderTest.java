@@ -33,8 +33,7 @@ public class RunApiLoaderTest extends BaseClass{
 		try
 		{
 			BaseClass.setup();
-			BaseClass.Login();
-			new RunApiLoaderTest().runAPILoader();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new RunApiLoaderTest().runAPILoader();
 			driver.quit();
 			
 		}

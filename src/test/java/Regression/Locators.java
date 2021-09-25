@@ -3,6 +3,21 @@ package Regression;
 
 public class Locators {
 	
+	
+	public static String freq="//tbody[@id='schedulerReport-table-Body']//tr//td[2]";
+	
+	public static String saveSch="save-scheduling-btn";
+	
+	public static String minCheck="//input[@type='radio' and @value='Minute']";
+	public static String hrCheck="//input[@type='radio' and @value='Hourly']";
+	
+	public static String apirowedit="//tbody[@id='schedulerReport-table-Body']//tr[1]//td[7]//button";
+	
+	public static String page="//a[text()='2']";
+	
+	
+	public static String schedules="//a[text()='Schedules']";
+	
 	public static String workflowStatus="//td[@class='AddBottomBorder CenterAlign'][3]";
 	
 	
@@ -207,7 +222,7 @@ public class Locators {
 	public static String EmailAddress = "EmailAddress";
 	public static String crapi = "Create_a_basic_request";
 
-	public static String reg = "https://dev.apistrong.com/Account/Register";
+	public static String reg = "https://dev.apistrong.io/Account/Register";
 
 	public static String txtRegEmail = "txtRegEmail";
 	public static String txtRegPassword = "txtRegPassword";

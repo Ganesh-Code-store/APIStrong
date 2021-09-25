@@ -8,7 +8,7 @@ public class BUG4418 {
 	//Bug 4418: UI\Create user: there are no placeholders for any field
 
 	static void placeHolder() {
-		new BaseClass().Login();
+		BaseClass.Login("workflow@mailinator.com", "test12");
 		BaseClass.driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 
 		BaseClass.driver.findElement(By.xpath(BaseClass.dropdownSubMenureport)).click();

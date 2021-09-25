@@ -33,7 +33,7 @@ public class BUG4891 extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 
 		BaseClass.setup();
-		BaseClass.Login();
+		BaseClass.Login("workflow@mailinator.com", "test12");
 		new Workflow_Creation().CreateWorkFlow();
 		new Workflow_Creation().AddAPIsToWorkflow(3);
 		new Workflow_Creation().executeFlow();

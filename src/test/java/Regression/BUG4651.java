@@ -96,8 +96,7 @@ void deleteAPI() throws InterruptedException
 
 	public static void main(String args[]) throws InterruptedException {
 		new BaseClass().setup();
-		new BaseClass().Login();
-		new BUG4651().importcoll();
+		BaseClass.Login("workflow@mailinator.com", "test12");		new BUG4651().importcoll();
 		new BUG4651().deleteColl();
 		// BaseClass.driver.quit();
 

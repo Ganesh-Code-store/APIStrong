@@ -76,8 +76,7 @@ public class SwitchAccountFlow extends BaseClass{
 	{
 		try {
 			new BaseClass().setup();
-			new BaseClass().Login();
-			new SwitchAccountFlow().inviteUser();
+			BaseClass.Login("workflow@mailinator.com", "test12");			new SwitchAccountFlow().inviteUser();
 			new SwitchAccountFlow().acceptInvite();
 			new SwitchAccountFlow().switchAcc();
 			driver.quit();

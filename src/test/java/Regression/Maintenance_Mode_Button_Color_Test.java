@@ -42,8 +42,7 @@ public class Maintenance_Mode_Button_Color_Test extends BaseClass {
 	public static void main(String[] args) throws InterruptedException {
 
 		new BaseClass().setup();
-		new BaseClass().Login();
-		new Maintenance_Mode_Button_Color_Test().testColor();
+		BaseClass.Login("workflow@mailinator.com", "test12");		new Maintenance_Mode_Button_Color_Test().testColor();
 		driver.quit();
 		
 	}
